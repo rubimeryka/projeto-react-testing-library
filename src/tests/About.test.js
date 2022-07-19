@@ -7,10 +7,6 @@ describe('Testa o component About', () => {
   it('Testa se a página contém as informações sobre a Pokédex', () => {
     renderWithRouter(<About />);
 
-    // const linkAbout = screen.getByRole('link', { name: 'About' });
-    // expect(linkAbout).toBeInTheDocument();
-    // userEvent.click(linkAbout);
-
     const text1 = (/This application/i);
     const text2 = (/One can filter Pokémons by type/i);
     const textAboutPokedex = screen.getByText(text1 && text2);
